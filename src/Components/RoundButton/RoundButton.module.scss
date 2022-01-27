@@ -1,0 +1,33 @@
+@mixin roundButton {
+    margin-top: 20px;
+    display: flex;
+    border:none;
+    font-family: 'Segoe UI' !important ;
+    color: white;
+    font-weight: bolder;
+    justify-content: center;
+    padding: 10px;
+    width: 100%;
+    border-radius: 20px;
+    margin-bottom: 5px;
+} 
+.roundButton {
+   @include roundButton();
+}
+
+/** 
+ CSS FOR ORANGE:
+ COLOR
+ HOVER
+ ... 
+**/
+$normal-linear-gradient : linear-gradient(106deg, rgba(223,212,52,1) 0%, rgba(233,191,128,1) 35%, rgba(233,196,94,1) 100%);
+$hover-linear-gradient  : linear-gradient(106deg, rgb(206, 194, 25) 0%, rgb(228, 159, 56)35%, rgb(230, 173, 16)100%);
+
+.orangeButton {
+    @include roundButton();
+    background: $normal-linear-gradient;
+    &:hover{
+        background: $hover-linear-gradient;
+    }
+}

@@ -1,5 +1,7 @@
 import React from 'react';
-import './Login.css'
+import './Login.css';
+import { RoundButton,Contants } from '../RoundButton';
+
 export const Login = () => {
   return (
     <>
@@ -25,6 +27,7 @@ export const Login = () => {
           <input type="button" className='round-button sign-up' value='Sign Up' />
         </div>
       </form>
+      <RoundButton value='note' type={Contants.ORG} >OK</RoundButton>
     </>
   );
 };
