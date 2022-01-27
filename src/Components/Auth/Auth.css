@@ -101,5 +101,5 @@
 .break-line {
     display: flex;
     justify-content: center;
-    font-weight: bolder;
+    /* font-weight: bolder; */
 } 

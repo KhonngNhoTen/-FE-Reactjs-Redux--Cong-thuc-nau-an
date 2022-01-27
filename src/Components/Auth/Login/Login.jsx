@@ -1,4 +1,4 @@
-import React, {  useState } from 'react';
+import React, { useState } from 'react';
 import { Auth, ConfigAuth } from '../index';
 import { RoundButton, RoundButtonConstants } from '../../RoundButton';
 import { InputText } from '../../InputText/InputText';
@@ -19,7 +19,7 @@ export const Login = () => {
                 },
                 {
                     name: 'forget_your_password',
-                    component:  <LinkText>Forget your password?</LinkText>
+                    component: <LinkText>Forget your password?</LinkText>
                 },
             ],
             [
@@ -37,6 +37,6 @@ export const Login = () => {
     }
 
     return (
-        <Auth config={config}></Auth>
+        <Auth config={config}/>
     );
 };

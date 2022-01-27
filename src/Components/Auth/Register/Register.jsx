@@ -5,8 +5,8 @@ import { InputText } from '../../InputText/InputText';
 export const Register = () => {
     const [config] = useState(
         new ConfigAuth(
-            ['Welcome', 'Back'],
-            'Please enter information to continue.',
+            ['New', 'Account'],
+            'Create a new account.',
             [
                 {
                     name: 'email',
@@ -23,7 +23,7 @@ export const Register = () => {
             ],
             [
                 <RoundButton type={RoundButtonConstants.ORANGE_BUTTON} onClick={signUp}>Sign Up</RoundButton>,
-                <RoundButton type={RoundButtonConstants.ORANGE_BUTTON} onClick={signIn}>Sign In</RoundButton>,
+                <RoundButton type={RoundButtonConstants.FADED_BUTTON} onClick={signIn}>Sign In</RoundButton>,
             ],
 
         )

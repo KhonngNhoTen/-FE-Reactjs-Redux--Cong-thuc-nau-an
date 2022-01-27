@@ -5,8 +5,8 @@ import { InputText } from '../../InputText/InputText';
 export const ForgetPassword = () => {
     const [config] = useState(
         new ConfigAuth(
-            ['Welcome', 'Back'],
-            'Please enter information to continue.',
+            ['Forget', 'Password'],
+            'Please enter new password.',
             [
                 {
                     name: 'email',
@@ -22,8 +22,8 @@ export const ForgetPassword = () => {
                 },
             ],
             [
-                <RoundButton type={RoundButtonConstants.ORANGE_BUTTON} onClick={signUp}>Submit</RoundButton>,
-                <RoundButton type={RoundButtonConstants.ORANGE_BUTTON} onClick={signIn}>Cancel</RoundButton>,
+                <RoundButton type={RoundButtonConstants.ORANGE_BUTTON} onClick={submit}>Submit</RoundButton>,
+                <RoundButton type={RoundButtonConstants.FADED_BUTTON} onClick={cancel}>Cancel</RoundButton>,
             ],
 
         )
