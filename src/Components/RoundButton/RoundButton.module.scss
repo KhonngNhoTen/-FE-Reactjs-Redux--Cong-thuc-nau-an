@@ -21,13 +21,35 @@
  HOVER
  ... 
 **/
-$normal-linear-gradient : linear-gradient(106deg, rgba(223,212,52,1) 0%, rgba(233,191,128,1) 35%, rgba(233,196,94,1) 100%);
-$hover-linear-gradient  : linear-gradient(106deg, rgb(206, 194, 25) 0%, rgb(228, 159, 56)35%, rgb(230, 173, 16)100%);
+$normal-orange-linear-gradient : linear-gradient(106deg, rgba(223,212,52,1) 0%, rgba(233,191,128,1) 35%, rgba(233,196,94,1) 100%);
+$hover-orange-linear-gradient  : linear-gradient(106deg, rgb(206, 194, 25) 0%, rgb(228, 159, 56)35%, rgb(230, 173, 16)100%);
 
 .orangeButton {
     @include roundButton();
-    background: $normal-linear-gradient;
+    background: $normal-orange-linear-gradient;
     &:hover{
-        background: $hover-linear-gradient;
+        background: $hover-orange-linear-gradient;
+    }
+}
+
+
+/** 
+ CSS FOR FADED BUTTON:
+ COLOR
+ HOVER
+ ... 
+**/
+
+$normal-faded-button-background-color : rgb(219, 219, 219) !important;
+$hover-faded-button-background-color  : rgb(160, 160, 160) !important;
+
+.fadedButton {
+    @include roundButton();
+    margin-top: 5px;
+    background-color: $normal-faded-button-background-color;
+    color: black !important;
+    background: none;
+    &:hover{
+        background-color: $hover-faded-button-background-color;
     }
 }

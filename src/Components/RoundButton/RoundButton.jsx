@@ -1,15 +1,15 @@
 import React from 'react';
 import clsx from 'clsx'
 import styles from './RoundButton.module.scss'
-export const RoundButton = ({children, value,type,...props}) => {
-    console.log(children);
-    console.log(value);
+export const RoundButton = ({ children, type, onClick, ...props }) => {
     return (
         <input type="button"
             className={clsx(
                 [styles.roundButton],
                 [styles[type]]
             )}
-            value={children} />
+            value={children}
+            onClick={onClick}
+        />
     );
 };

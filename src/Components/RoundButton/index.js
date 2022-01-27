@@ -1,3 +1,3 @@
 import { RoundButton } from "./RoundButton";
-import { Constants } from "./Constants.js";
-export {RoundButton,Contants};
+import { Constants as RoundButtonConstants } from "./Constants.js";
+export { RoundButton, RoundButtonConstants };

@@ -1,0 +1,13 @@
+.linkText {
+    font-family: 'Segoe UI' !important ;
+    color: rgb(133, 133, 133);
+    font-weight: lighter;
+    display: flex;
+    font-size: small;
+    justify-content: center;
+    &:hover{
+        cursor: pointer;
+        text-decoration: underline;
+        color: #F5B875 ;
+    }
+}

@@ -1,7 +1,8 @@
 import React from 'react';
 import './Login.css';
-import { RoundButton,Contants } from '../RoundButton';
-
+import { RoundButton, RoundButtonConstants } from '../RoundButton';
+import { LinkText } from '../LinkText';
+import { InputText } from '../InputText/InputText';
 export const Login = () => {
   return (
     <>
@@ -13,21 +14,15 @@ export const Login = () => {
           <div className='content'>Please enter information to continue.</div>
         </div>
         <div className='body'>
-          <div className='input'>
-            <input type="text" placeholder='Email' />
-          </div>
-          <div className='input'>
-            <input type="password" placeholder='Password' />
-          </div>
-          <div className='link-text'>
-            Forget your password?
-          </div>
-          <input type="button" className='round-button sign-in' value='Sign In' />
+        <InputText type={'text'} placeholder={'Email'}></InputText>
+
+          <InputText type={'password'} placeholder={'Password'}></InputText>
+          <LinkText>Forget your password?</LinkText>
+          <RoundButton type={RoundButtonConstants.ORANGE_BUTTON} onClick={() => { }}>Sing In</RoundButton>
           <small className='break-line'>Or</small>
-          <input type="button" className='round-button sign-up' value='Sign Up' />
+          <RoundButton type={RoundButtonConstants.FADED_BUTTON}>Sign Up</RoundButton>
         </div>
       </form>
-      <RoundButton value='note' type={Contants.ORG} >OK</RoundButton>
     </>
   );
 };
