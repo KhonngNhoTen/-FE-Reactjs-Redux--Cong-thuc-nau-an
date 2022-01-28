@@ -1,0 +1,155 @@
+.backround {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    height: 100vh;
+
+   
+}
+
+.box{
+    width: 800px;
+    height: 600px;
+    background-color: rgb(252, 252, 252);
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0 2px rgb(155, 155, 155);
+    border-radius: 20px;
+    
+}
+.header {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+.sub-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end; 
+    margin: 0;
+    padding-right: 30px;
+    padding-top: 15px;
+}
+.export {
+    color: rgb(145, 145, 145);
+    font-size: 1.2rem;
+    margin-right: 15px;
+}
+.avatar {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: yellowgreen;
+}
+.search-box { 
+    position: relative;
+}
+
+.search-box>input{
+    display: block;
+    padding: 5px 20px 5px 30px;
+    width: 120px;
+    border: none;
+    outline: none;
+    box-shadow: 0 0 2px rgb(202, 202, 202);
+    border-radius: 25px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(110, 110, 110);
+    font-size: 0.73rem;
+    margin-right: 15px;
+} 
+
+.search-box .icon{
+    position: absolute;
+    top: 50%;
+    left: 3%;
+    color: rgb(110, 110, 110);
+    transform: translateY(-49%);
+    cursor: pointer;
+}
+
+.search-box .icon:hover{
+    color: rgb(199, 199, 199);
+}
+
+
+
+
+/* TOOL GROUP */
+
+.tool-group {
+    display: flex;
+    flex-direction: row;
+    margin: 20px 0 20px 0;
+    padding: 0;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    border: none;
+    background-color: white;
+    box-shadow: 0 0 2px rgb(206, 206, 206);
+    justify-content: flex-end;
+    padding-right: 30px;
+    align-items: center;
+    font-size: 0.9rem;
+    line-height: 0.9rem;
+    color: rgb(110, 110, 110);
+    font-family: 'Roboto';
+    font-weight: lighter;
+    position: relative;
+}
+
+.tool-group .add {
+   display: flex;
+   flex-direction: row;
+   position: absolute;
+   left: 5%;
+   cursor: pointer;
+}
+
+.tool-group .add:hover {
+    color: rgb(221, 221, 221);
+}
+
+.tool-group .add>i{
+    color: rgb(110, 110, 110);
+    cursor: pointer;
+    transform: translateY(5%);
+}
+
+.tool-group .add div {
+    color: rgb(110, 110, 110);
+    font-family: 'Roboto';
+    font-weight: lighter;
+    /* font-size: 1.1rem; */
+    margin-left: 5px;
+}
+
+.tool-group .filter {
+    display: flex;
+    align-items: center;
+    margin-right: 17px;
+}
+
+.tool-group .filter .select-priority {
+    border-radius: 20px;
+    border: solid 0.5px rgb(173, 173, 173);
+    padding: 2px 5px 2px 5px;
+    margin-left: 3px;
+}
+
+
+.tool-group .order {
+    display: flex;
+    align-items: center;
+
+}
+
+.tool-group .order .select-priority {
+    border-radius: 20px;
+    border: solid 0.5px rgb(173, 173, 173);
+    padding: 2px 5px 2px 5px;
+    margin-left: 3px;
+}

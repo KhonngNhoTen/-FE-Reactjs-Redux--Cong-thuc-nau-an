@@ -5,8 +5,7 @@ import reportWebVitals from './reportWebVitals';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 
 import { Login, Register, ForgetPassword } from './Components/Auth'
-import App from './App';
-
+import App from './App'
 ReactDOM.render(
   <React.StrictMode>
     <Router>
@@ -14,6 +13,7 @@ ReactDOM.render(
         <Route path = '/login' element={<Login/>} />
         <Route path = '/register' element={<Register/>} />
         <Route path = '/forget-password' element={<ForgetPassword/>} />
+        <Route path='/' element = {<App/>}/>
       </Routes>
     </Router>
   </React.StrictMode>,
