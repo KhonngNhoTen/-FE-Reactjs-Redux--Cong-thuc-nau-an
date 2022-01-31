@@ -1,0 +1,41 @@
+.card {
+    width: 130px;
+    height: 120px;
+    border: none;
+    box-shadow: 0 0 2px rgb(156, 156, 156);
+    background-color: white;
+    border-radius: 15px;
+    margin: 20px 15px;
+    padding: 10px;
+    text-align: center;
+    position: relative;
+}
+
+.card>i {
+   font-size: 100px;
+   color: rgb(219, 211, 94);
+
+}
+.card .name {
+    margin: 0;
+    padding: 0  ;
+}
+.card .more {
+    position: absolute;
+    color: rgb(112, 112, 112);
+    right: 10px;
+    top: 10px;
+    display: none;
+}
+
+.card:hover{
+    cursor: pointer;
+}
+
+.card:hover .more{
+    display: block;
+}
+
+.card .more:hover{
+    color: rgb(216, 216, 216);
+}

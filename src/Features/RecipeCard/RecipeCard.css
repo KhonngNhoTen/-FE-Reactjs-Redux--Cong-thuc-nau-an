@@ -1,0 +1,51 @@
+.card {
+    background-color: white;
+    border: none;
+    box-shadow: 0 2px 5px rgb(150, 150, 150);
+    border-radius: 15px;
+    padding: 10px;
+    width: 200px;
+    height: 350px;
+    position: relative;
+    margin: 7px 10px;
+}
+
+.card img {
+    width: 200px;
+    height: 170px;
+}
+
+.card .name {
+    margin: 10px 0;
+    font-weight: bolder;
+    font-size: larger;
+    font-family: 'Fraunces';
+}
+
+.card .description {
+    font-family: 'Roboto Slab';
+    margin: 10px 0;
+    font-size: small;
+    font-weight: lighter;
+}
+
+.card button {
+    padding: 5px;
+    display: block;
+    width: 100%;
+    background-color: white;
+    border: solid 1.2px rgba(233,191,128,1);
+    border-radius: 5px;
+    color:  rgba(233,191,128,1);
+    transition: 0.2s all;
+    position:absolute;
+    bottom: 3%;
+    left: 0;
+    width: 90%;
+    transform: translateX(5%);
+}
+
+.card button:hover {
+    background-color: rgba(233,191,128,1);
+    color: white;
+}

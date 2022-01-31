@@ -1,5 +1,5 @@
-import { Outlet } from 'react-router-dom';
-import './App.css'
+import './App.css';
+import RecipeCard from './Features/RecipeCard'
 import React from 'react';
 function App() {
   return (
@@ -44,8 +44,7 @@ function App() {
           </div>
         </div>
         <div className='body'>
-          {/* <Outlet /> */}
-          OKKKKKKK
+           <RecipeCard/>
         </div>
       </div>
     </div>

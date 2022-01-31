@@ -83,7 +83,7 @@
 .tool-group {
     display: flex;
     flex-direction: row;
-    margin: 20px 0 20px 0;
+    margin: 20px 0 0 0;
     padding: 0;
     padding-bottom: 10px;
     padding-top: 10px;
@@ -152,4 +152,18 @@
     border: solid 0.5px rgb(173, 173, 173);
     padding: 2px 5px 2px 5px;
     margin-left: 3px;
+}
+
+/* 
+   CSS FOR BODY
+*/
+
+.body {
+    margin: 0;
+    padding: 20px 20px;
+    display: flex;
+    justify-content: flex-start;
+    flex-flow: row wrap;
+    overflow-y: scroll;
+    height: 440px;
 }
