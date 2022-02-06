@@ -10,6 +10,7 @@ export const RoundButton = ({ children, type, onClick, ...props }) => {
             )}
             value={children}
             onClick={onClick}
+            style={props.styles}
         />
     );
 };

@@ -3,7 +3,7 @@ import './MenuCard.css';
 const MenuCard = () => {
     return (
         <div className='card'>
-            <i class="fas fa-folder"></i>
+            <i className= "fas fa-folder"></i>
             <div className='name'>Name....</div>
             <div className='more'><i class="fas fa-ellipsis-v"></i></div>
 

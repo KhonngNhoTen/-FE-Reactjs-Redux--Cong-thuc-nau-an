@@ -5,7 +5,8 @@ import reportWebVitals from './reportWebVitals';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 
 import { Login, Register, ForgetPassword } from './Components/Auth'
-import App from './App'
+import App from './App';
+
 ReactDOM.render(
   <React.StrictMode>
     <Router>

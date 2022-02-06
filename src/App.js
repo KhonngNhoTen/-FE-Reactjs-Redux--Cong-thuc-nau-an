@@ -1,5 +1,6 @@
 import './App.css';
-import RecipeCard from './Features/RecipeCard'
+import RecipeCard from './Features/RecipeCard';
+import EditRecipe from './Features/EditRecipe';
 import React from 'react';
 function App() {
   return (
@@ -14,7 +15,7 @@ function App() {
               </div>
             </div>
             <div className='export'>
-              <i class="fas fa-file-download"></i>
+              <i className="fas fa-file-download"></i>
             </div>
             <div className='avatar'>
 
@@ -28,23 +29,23 @@ function App() {
             </div>
             <div className='filter'>
               <div>Filter:</div>
-              <select className='select-priority'>
-                <option selected value="alway">alway</option>
+              <select defaultValue='alway' className='select-priority'>
+                <option  value="alway">alway</option>
                 <option value="often">often</option>
                 <option value="sometimes">sometimes</option>
               </select>
             </div>
             <div className='order'>
               <div>Order:</div>
-              <select className='select-priority'>
-                <option selected value="alway">Name a-z</option>
-                <option value="often">Name z-a</option>
+              <select defaultValue= 'dec' className='select-priority'>
+                <option value="dec">Name a-z</option>
+                <option value="asc">Name z-a</option>
               </select>
             </div>
           </div>
         </div>
         <div className='body'>
-           <RecipeCard/>
+          
         </div>
       </div>
     </div>

@@ -45,11 +45,26 @@ $hover-faded-button-background-color  : rgb(160, 160, 160) !important;
 
 .fadedButton {
     @include roundButton();
-    margin-top: 5px;
+    // margin-top: 5px;
     background-color: $normal-faded-button-background-color;
     color: black !important;
     background: none;
     &:hover{
         background-color: $hover-faded-button-background-color;
+    }
+}
+
+
+
+/**
+  CSS FOR SMALL INLINE BUTTON
+**/
+
+.inlineSmall {
+    @include roundButton();
+    font-size: 10px;
+    background: $normal-orange-linear-gradient;
+    &:hover{
+        background: $hover-orange-linear-gradient;
     }
 }
