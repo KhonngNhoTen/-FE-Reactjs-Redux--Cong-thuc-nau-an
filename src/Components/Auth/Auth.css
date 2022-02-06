@@ -1,6 +1,6 @@
 .form-login{
-    width: 300px;
-    height: 550px;
+    width: 300px !important;
+    height: 550px !important;
     border-radius: 20px;
     background-color: #fff;
     position: relative;
@@ -14,8 +14,8 @@
     height: 500px;
     border-radius: 50%;
     position: absolute;
-    top: -47%;
-    left: -40%;
+    top: -47% !important;
+    left: -40% !important;
     z-index: 2;
     /* background-color: #F5B875; */
     background: rgb(223,212,52);
@@ -26,8 +26,8 @@
     color: white;
     
     z-index: 10;
-    margin-top: 60px;
-    padding-left: 30px;
+    margin-top: 60px ;
+    padding-left: 30px ;
     font-family: 'Roboto Slab', serif ;
     display: flex;
     flex-direction: column;
