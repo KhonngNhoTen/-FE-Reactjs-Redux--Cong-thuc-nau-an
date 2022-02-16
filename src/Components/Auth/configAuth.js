@@ -5,7 +5,7 @@ const config = class {
     field = [];
     footer = []
 
-    constructor(heading, contentHeading, field, footer) {
+    constructor(heading, contentHeading, field, footer, data) {
         this.contentHeading = contentHeading;
         this.heading = heading;
         this.field = field;
