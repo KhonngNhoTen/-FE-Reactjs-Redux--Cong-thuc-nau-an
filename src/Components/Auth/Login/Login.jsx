@@ -1,86 +1,43 @@
 import React, { useState } from 'react';
 import { Auth, ConfigAuth } from '../index';
 import { RoundButton, RoundButtonConstants } from '../../RoundButton';
-import { signIn } from '../../../Apis/userAPI'
+import { signIn as login } from '../../../Apis/userAPI'
 import { InputText } from '../../InputText/InputText';
 import { LinkText } from '../../LinkText';
 import { useNavigate } from 'react-router-dom'
 import ErrorTitle from '../../ErrorTitle/ErrorTitle';
 export const Login = () => {
     const navigate = useNavigate();
-    const [email,setEmail] = useState('');
-    const [password,setPassword] = useState('');
-    const [config, setConfig] = useState(
-        new ConfigAuth(
-            ['Welcome', 'Back'],
-            'Please enter information to continue.',
-            [
-                {
-                    name: 'email',
-                    component: 
-                    <InputText 
-                        type={'text'} 
-                        placeholder={'Email'} 
-                        onChange = { handleEmailOnchange }
-                        // value = {email}
-                    >
-                    </InputText>
-                },
-                {
-                    name: 'password',
-                    component: 
-                    <InputText 
-                        type={'password'} 
-                        placeholder={'Password'}
-                        onChange ={e=> setPassword(e.target.value)}
-                        // value = {password}
-                        autocomplete
-                    >
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+    const [error, setError] = useState('');
 
-                    </InputText>,
-                },
-                {
-                    name: 'error',
-                    component: <></>,
-                },
-                {
-                    name: 'forget_your_password',
-                    component: <LinkText>Forget your password?</LinkText>
-                },
-            ],
-            [
-                <RoundButton type={RoundButtonConstants.ORANGE_BUTTON} onClick={signIn}>Sign In</RoundButton>,
-                <RoundButton type={RoundButtonConstants.FADED_BUTTON} onClick={signUp}>Sign Up</RoundButton>,
-            ]
-        )
-    );
-
-    function handleEmailOnchange(e){
-        console.log(e.target.value);
-       setEmail(e.target.value);
-       console.log(email);
+    function handleEmailOnchange(e) {
+        setEmail(e.target.value);
+        setError('');
+    }
+    function handlePasswordChange(e) {
+        setPassword(e.target.value);
+        setError('');
     }
 
-    function signIn() {
-        console.log(email); 
-        return;
-        signIn({
+    async function signIn() {
+        await login({
             email,
             password
         })
             .then(
-                r => navigate('/')
+                (rs) => {
+                    if (rs.success) {
+                        localStorage.setItem('token', rs.token);
+                        navigate('/');
+                    } else
+                        setError('Email or password not correct.')
+                }
             )
             .catch(
-                error => {
-                    let configClone = {...config};
-                    configClone.field[3] =  {
-                        name: 'error',
-                        component: <ErrorTitle>
-                            `Email or password not correct!`
-                        </ErrorTitle>,
-                    }
-                    setConfig (configClone);
+                (error) => {
+                    setError('Internal Server Error.')
                 }
             );
     }
@@ -89,6 +46,47 @@ export const Login = () => {
     }
 
     return (
-        <Auth config={config} />
+        <Auth
+            heading={['Welcome', 'Back']}
+            contentHeading={'Please enter information to continue.'}
+            field={[
+                {
+                    name: 'email',
+                    component:
+                        <InputText
+                            type={'text'}
+                            placeholder={'Email'}
+                            onChange={handleEmailOnchange}
+                        >
+                        </InputText>
+                },
+                {
+                    name: 'password',
+                    component:
+                        <InputText
+                            type={'password'}
+                            placeholder={'Password'}
+                            onChange={handlePasswordChange}
+                            autocomplete
+                        >
+
+                        </InputText>,
+                },
+                {
+                    name: 'error',
+                    component: error === '' ? <></> :
+                        <ErrorTitle>{error}</ErrorTitle>,
+                },
+                {
+                    name: 'forget_your_password',
+                    component: <LinkText>Forget your password?</LinkText>
+                },
+            ]}
+            footer={[
+                <RoundButton type={RoundButtonConstants.ORANGE_BUTTON} onClick={signIn}>Sign In</RoundButton>,
+                <RoundButton type={RoundButtonConstants.FADED_BUTTON} onClick={signUp}>Sign Up</RoundButton>,
+            ]}
+
+        />
     );
 };
