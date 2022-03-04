@@ -1,7 +1,6 @@
 import './App.css';
-import RecipeCard from './Features/RecipeCard';
-import EditRecipe from './Features/EditRecipe';
 import React from 'react';
+import { Outlet } from 'react-router-dom';
 function App() {
   return (
     <div className='backround'>
@@ -45,7 +44,7 @@ function App() {
           </div>
         </div>
         <div className='body'>
-          
+          <Outlet/>
         </div>
       </div>
     </div>

@@ -6,6 +6,7 @@ import { InputText } from '../../InputText/InputText';
 import { LinkText } from '../../LinkText';
 import { useNavigate } from 'react-router-dom'
 import ErrorTitle from '../../ErrorTitle/ErrorTitle';
+import { saveAllToken } from '../../../Utils/StoreToken';
 export const Login = () => {
     const navigate = useNavigate();
     const [email, setEmail] = useState('');
@@ -29,7 +30,7 @@ export const Login = () => {
             .then(
                 (rs) => {
                     if (rs.success) {
-                        localStorage.setItem('token', rs.token);
+                        saveAllToken(rs.token, rs.refeshToken);
                         navigate('/');
                     } else
                         setError('Email or password not correct.')

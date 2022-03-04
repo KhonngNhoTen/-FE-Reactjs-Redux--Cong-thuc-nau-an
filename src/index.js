@@ -7,6 +7,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import { Login, Register, ForgetPassword } from './Components/Auth'
 import App from './App';
 import PrivateRoute from './Components/PrivateRoute';
+import Menu from './Features/Menu/Menu';
 ReactDOM.render(
   <React.StrictMode>
     <Router>
@@ -14,9 +15,9 @@ ReactDOM.render(
         <Route path = '/login' element={<Login/>} />
         <Route path = '/register' element={<Register/>} />
         <Route path = '/forget-password' element={<ForgetPassword/>} />
-        <Route path='/' 
-          element = {<PrivateRoute component={<App/>} />}
-        />
+        <Route path='/' element = {<PrivateRoute component={<App/>}/> }>
+           <Route index element={<Menu/>}/>
+        </Route> 
       </Routes>
     </Router>
   </React.StrictMode>,
